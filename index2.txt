@@ -1,0 +1,128 @@
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop
+$ cd projeto-git/
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git
+$ touch index.txt
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git
+$ git init
+Initialized empty Git repository in C:/Users/maril/Desktop/projeto-git/.git/
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git add index.txt
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.txt
+
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ touch index2.txt
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index2.txt
+
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git add index2.txt
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.txt
+        new file:   index2.txt
+
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git commit -m 'aprendendo a fazer commit'
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'maril@DESKTOP-KQUAVT3.(none)')
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$  git config --global user.email 'mariliancouto@gmail.com'
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ ^C
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git config --global user.name 'MariliaCouto'
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git commit -m 'aprendendo a fazer commit'
+[master (root-commit) e967779] aprendendo a fazer commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.txt
+ create mode 100644 index2.txt
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git add .
+
+maril@DESKTOP-KQUAVT3 MINGW64 ~/Desktop/projeto-git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.txt
